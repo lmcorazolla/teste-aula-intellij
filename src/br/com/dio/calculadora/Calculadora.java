@@ -6,14 +6,17 @@ public class Calculadora {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        Double a, b;
+        double a, b;
+        b = 0.0;
         System.out.println("Digite o primeiro valor: ");
         a = Double.parseDouble(scan.next());
-        System.out.println("Digite o segundo valor: ");
-        b = Double.parseDouble(scan.next());
+        while(b == 0.0) {
+            System.out.println("Digite o segundo valor: ");
+            b = Double.parseDouble(scan.next());
+        }
 
-        Double somar = somar(a, b);
-        Double subtrair = subtrair(a, b);
+        double somar = somar(a, b);
+        double subtrair = subtrair(a, b);
         double multiplicar = multiplicar(a, b);
         double dividir = dividir(a, b);
 
